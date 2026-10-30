@@ -1,0 +1,12 @@
+
+services:
+  - type: web
+    name: multi-live-chat
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: YOUTUBE_API_KEY
+        sync: false
+        

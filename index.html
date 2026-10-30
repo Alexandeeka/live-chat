@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi Live Chat</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#090b10;color:#fff;font-family:Arial,sans-serif;padding:18px}
+.container{max-width:750px;margin:auto}
+header{margin-bottom:20px}
+h2{margin-bottom:5px}
+small,.muted{color:#8992a3}
+.panel{background:#151923;border:1px solid #292f3d;border-radius:15px;padding:16px;margin-bottom:15px}
+label{display:block;color:#aaa;font-size:12px;margin:12px 0 7px}
+input{width:100%;padding:13px;background:#090d15;color:white;border:1px solid #343b4b;border-radius:9px}
+button{padding:13px;border:0;border-radius:9px;font-weight:bold;cursor:pointer}
+.connect{background:#3978f6;color:white;width:100%;margin-top:15px}
+.disconnect{background:#303746;color:white;width:100%;margin-top:8px}
+.platforms{display:flex;gap:10px;margin-top:15px}
+.platform{flex:1;background:#202633;padding:12px;border-radius:10px;font-size:12px}
+.live{color:#5be99a}
+.offline{color:#ff8585}
+.chat{height:430px;overflow-y:auto}
+.msg{display:flex;gap:10px;background:#202633;padding:12px;border-radius:10px;margin-bottom:9px}
+.logo{width:30px;height:30px;display:grid;place-items:center;border-radius:8px;font-weight:bold;flex-shrink:0}
+.tt{background:white;color:black}
+.yt{background:red;color:white}
+.name{font-weight:bold;font-size:13px}
+.platform-name{font-size:10px;color:#aaa}
+.text{font-size:13px;margin-top:5px;overflow-wrap:anywhere}
+.empty{text-align:center;color:#777;padding:60px 5px}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<h2>⚡ MULTI LIVE CHAT</h2>
+<small>TikTok + YouTube Unified Chat</small>
+</header>
+
+<div class="panel">
+<h3>Connect Platforms</h3>
+
+<label>TikTok Username</label>
+<input id="tiktok" placeholder="@username">
+
+<label>YouTube Channel</label>
+<input id="youtube" placeholder="@channel atau Channel ID">
+
+<button class="connect" onclick="connectLive()">CONNECT</button>
+<button class="disconnect" onclick="disconnectLive()">DISCONNECT</button>
+
+<div class="platforms">
+<div class="platform">🎵 TikTok<br><span id="ttStatus">Disconnected</span></div>
+<div class="platform">▶ YouTube<br><span id="ytStatus">Disconnected</span></div>
+</div>
+</div>
+
+<div class="panel">
+<h3>Live Chat <small id="count">0 pesan</small></h3>
+<div class="chat" id="chat">
+<div class="empty">Belum ada pesan.<br>Hubungkan akun LIVE terlebih dahulu.</div>
+</div>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
